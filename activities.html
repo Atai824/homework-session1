@@ -27,7 +27,7 @@
                     <nav class="main-menu">
                         <ul>
                             <li><a href="index.html">Home</a></li>
-                            <li><a href="Gallery.html">Cliffs</a></li>
+                            <li><a href="cliffs.html">Cliffs</a></li>
                             <li class="active"><a href="activities.html">Activities</a></li>
                             <li ><a href="contact.html">Contact</a></li>
                         </ul>
@@ -132,5 +132,28 @@
                 </div>    
             </footer>
          </div>
+         <script>
+            // JavaScript for the bottom pictures
+            var partners = []; // To save <img> tags
+            var fileNames = []; // File titles
+            var imageList = []; // HTML line with <li>
+            var image;
+            var openList = "<li class='partner'>";
+            var closeList = "</li>";
+            for (var i = 0; i < 6; i++) {
+                fileNames.push("partner-" + [
+                    "bustour",
+                    "cabinrental",
+                    "campingadv",
+                    "collegetours",
+                    "rentalbike",
+                    "tourgroup"
+                ][i]);
+                partners.push("<img src='partners/" + fileNames[i] + ".png' alt='Partners'>");
+                image = openList + partners[i] + closeList;
+                imageList.push(image);
+            }
+            document.getElementById("partners").innerHTML = imageList.join('');
+         </script>
     </body>
 </html>
