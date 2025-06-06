@@ -20,6 +20,7 @@ function displayCode() {
 function disableButton() {
     document.getElementById("submit").disabled = true;
 }
+
 //Activate function
 window.onload = function () {
     displayCode();
