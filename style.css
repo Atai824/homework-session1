@@ -17,6 +17,10 @@ header {
     background: no-repeat lightgrey url(images/cliff_rock.jpg);
     background-size: 1500px;
 }
+#cliffs header {
+    background: no-repeat lightgrey url(images/forest_cliff.jpg);
+    background-size: 1500px;
+}
 .main-header {
     background-color:rgb(255, 255, 255, 0.8);
     width: 659.5px;
@@ -72,9 +76,16 @@ main h2 {
     color:#9ed034
 }
 /* Partners */
+#partners {
+    font-size: 0;
+}
+#partners .partner {
+    font-size: 15px;
+}
 section {
     width: 100%;
-    background-color: #4288c3
+    background-color: #4288c3;
+    margin-top: 50px;
 }
 section #partners {
     width: 1200px;
@@ -282,11 +293,30 @@ form .button {
     gap: 20px;
     margin: 0 auto;
 }
-
-#album img {
+.cliff {
     width: 45%;
+    background-color: white;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.cliff img {
+    width: 100%;
     height: auto;
-    border-radius: 5px;
+    display: block;
+}
+.caption {
+    background-color: #852b1b;
+    color: white;
+    font-weight: bold;
+    padding: 10px 0;
+    margin: 0;
+    font-size: 1.1em;
+}
+#album img {
+    width: 100%;
+    height: auto;
 }
 /* Home Clock Display */
 #timeofday {
