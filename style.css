@@ -333,4 +333,9 @@ form .button {
     color: #125688;
     margin-top: 10px;
 }
-
+/* jQuery in Activity page */
+.selected {
+    background-color: #9ed034;
+    color: white;
+    font-weight: bold;
+}
