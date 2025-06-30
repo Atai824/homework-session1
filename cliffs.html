@@ -10,7 +10,8 @@
         <meta charset="utf-8">
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https:cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+        <!-- Bootstrap CSS -->
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     </head>
     <body id="cliffs">
         <!-- Main container for the whole page -->
@@ -25,8 +26,18 @@
                         <img src="images/logo.png" alt="Great Cliffs Logo" width="125">
                     </div>
                     <!-- Main Navigation Menu -->
-                    <nav class="main-menu">
-                        <ul>
+                    <nav class="main-menu navbar navbar-expand-lg navbar-dark p-0">                        
+                        <button class="navbar-toggler ml-auto mr-3" 
+                        type="button" 
+                        data-toggle="collapse" 
+                        data-target="#navbarNav" 
+                        aria-controls="navbarNav" 
+                        aria-expanded="false" 
+                        aria-label="Toggle navigation">                            
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                            <ul class="navbar-nav text-uppercase">
                             <li><a href="index.html">Home</a></li>
                             <li class="active"><a href="cliffs.html">Cliffs</a></li>
                             <li><a href="activities.html">Activities</a></li>
@@ -111,5 +122,8 @@
          </div>
          <!-- Patners -->
           <script src="js/site_scripts.js"></script>
+          <!-- Bootstrap JS -->
+           <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+           <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>

@@ -18,4 +18,4 @@ partners.push("<img src='partners/" + fileNames[i] + ".png' alt='Partners'>");
 image = openList + partners[i] + closeList;
 imageList.push(image);
 }
-document.getElementById("partners").innerHTML = imageList;
+document.getElementById("partners").innerHTML = imageList.join('');
