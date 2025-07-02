@@ -9,37 +9,28 @@ header {
 }
 #home {
     background:  no-repeat white url(images/cliff_ocean.jpg);
-    background-size: 100%;
-    position: static;
+    background-size: 100% ;
+
 }
 
 #activities {
     background: no-repeat white url(images/runfly.jpg);
-    background-size: 100%;
-    position: static;
+    background-size: 100% ;
 }
 #contact {
     background: no-repeat white url(images/cliff_rock.jpg);
-    background-size: 100%;
-    position: relative;
+    background-size: 100% ;
 }
 #cliffs {
     background: no-repeat white url(images/forest_cliff.jpg);
-    background-size: 100%;
-    position: relative;
+    background-size: 100% ;
 }
-main {
-    padding: 2em;
-    margin-top: 0;
-    width: 100;
-}
-
 .main-header {
     background-color: rgba(38, 41, 61, 0.7);
     width: 659.5px;
     margin: 2em auto 0 auto;
     min-height: 100px;
- 
+    height: 100px;
 }
 .main-header .logo img {
     width: 100px;

@@ -1,27 +1,38 @@
 $(document).ready(function () {
+    let selectedActivities = [];
+    
     $("td").click(function() {
         var content = $(this).text();
+        var columnIndex = $(this).index();
+        var cliffName = $("table thead th").eq(columnIndex).text();
+        var fullText = content + " at " + cliffName;
 
         if (content != "Not Available") {
             $(this).toggleClass("tdhighlight");
 
-            var columnIndex = $(this).index();
-            var cliffName = $("table thead th").eq(columnIndex).text();
-
-            var fullText = content + " at " + cliffName;
-
-            if($(this).hasClass("tdhighlight")) {
-                $('#displaySelected').css("visibility","visible");
-                $('#displaySelected').css("margin-top","2em");
-                $('#result').append("<p>" + fullText + "</p>");
-
+            if ($(this).hasClass("tdhighlight")) {
+                selectedActivities.push(fullText);
             } else {
-                $('#result p:contains("' + fullText + '")').remove();
-                if ($('#result').has('p').length == false) {
-                    $('#displaySelected').css("visibility","hidden");
-                    $('#displaySelected').css("margin-top","0");
-                }
+                selectedActivities = selectedActivities.filter(item => item !== fullText);
             }
+            
+            // Активируем/деактивируем кнопку
+            $("#showSelectedBtn").prop("disabled", selectedActivities.length === 0);
         }
+    });
+    
+    // Обработчик для кнопки показа модального окна
+    $("#showSelectedBtn").click(function() {
+        $("#modalActivitiesList").empty();
+        
+        if (selectedActivities.length > 0) {
+            selectedActivities.forEach(function(activity) {
+                $("#modalActivitiesList").append("<p>" + activity + "</p>");
+            });
+        } else {
+            $("#modalActivitiesList").append("<p>No activities selected</p>");
+        }
+        
+        $("#activitiesModal").modal("show");
     });
 });
